@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <!-- Facebook -->
+      <meta property="og:url" content="http://www.cwb.gov.tw/V7/index.htm" />
+      <meta property="og:title" content="中央氣象局全球資訊網" />
+      <meta property="og:image" content="http://www.cwb.gov.tw/V7/forecast/taiwan/Data/Forecast01.png" />
+      <meta property="og:image" content="http://www.cwb.gov.tw/V7/observe/satellite/Data/s1p/s1p.jpg" />
+      <meta property="og:description" content="氣象局的施政與業務發展，在推動現代化氣象觀測、發展精緻化氣象預報、開創多元化氣象服務管道，以提升氣象服務水準，並達成防災減災及促進經濟發展之目標，為健康台灣提供優質氣象資訊。" />
+      <meta property="og:site_name" content="中央氣象局全球資訊網" />
+      <meta name="application-name" content="中央氣象局">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="msapplication-TileImage" content="/V7/images/win10/cwbPinlogo.png">
+      <meta name="msapplication-square70x70logo" content="/V7/images/win10/cwbPinlogo70.png">
+      <meta name="msapplication-square150x150logo" content="/V7/images/win10/cwbPinlogo150.png">
+      <meta name="msapplication-square310x310logo" content="/V7/images/win10/cwbPinlogo310.png">
+      <title>天氣預報</title>
+      <link href="/V7/css/CwbWebFlexable13.css" rel="stylesheet" type="text/css" media="screen, print, projection">
+      <!--[if lt IE 9]>
+      <link href="/V7/css/CwbWebFlexable13IE8.css" rel="stylesheet" type="text/css" media="screen, print, projection">
+      <![endif]-->
+      <!--[if lt IE 8]>
+      <link href="/V7/css/CwbWebFlexable13IE7.css" rel="stylesheet" type="text/css" media="screen, print, projection">
+      <![endif]-->
+      <!--[if IE 6]>
+      <link href="/V7/css/CwbWebFlexableIE613.css" rel="stylesheet" type="text/css" media="screen, print,  projection">
+      <![endif]-->
+      <link href="/V7/css/NeoHomeContainer.css" rel="stylesheet" type="text/css" media="screen, print, projection">
+      <link href="/V7/css/CwbtaiwanMap12.css" rel="stylesheet" type="text/css" media="screen, projection">
+      <link href="/V7/css/CwbWebFlexable10.css" rel="stylesheet" type="text/css" media="screen, projection">
+      <link href="/V7/css/CwbWebSven10.css" rel="stylesheet" type="text/css" media="screen, projection">
+      <link href="/V7/css/CwbWebDoris10.css" rel="stylesheet" type="text/css" media="screen, projection">
+      <link href="/V7/css/smap.css" rel="stylesheet" type="text/css" media="screen, projection">
+      <link type="text/css" href="/V7/css/custom-theme/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+      <link rel="stylesheet" href="/V7/css/jsonSuggest.css" type="text/css" />
+      <script type="text/javascript" src="/V7/js/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="/V7/js/jquery-ui-1.8.20.custom.min.js"></script>
+      <script type="text/javascript" src="/V7/js/funcTable.js"></script>
+      <script type="text/javascript" src="/V7/js/stone.js"></script>
+      <script type="text/javascript" src="/V7/js/cwb.js"></script>
+      <script type="text/javascript" src="/V7/js/warning_info.js"></script>
+      <script type="text/javascript" src="/V7/js/warning.js"></script>
+      <script type="text/javascript" src="/V7/js/scrolltopcontrol.js"></script>
+      <script language="JavaScript" src="/V7/js/HotSearch.js"></script>
+      <script language="JavaScript" src="/V7/js/jquery.jsonSuggest.js"></script>
+      <link rel="govtwsimpledc.xsd" href="http://www.gov.tw/schema/dc/govtwsimpledc.xsd" title="Dublin Core" />
+      <meta name="DC.Creator" content="交通部中央氣象局" />
+      <meta name="DC.Contributor" content="交通部中央氣象局" />
+      <meta name="DC.Type" content="服務" />
+      <meta name="DC.Format" content="text" />
+      <meta name="DC.Source" content="交通部中央氣象局" />
+      <meta name="DC.Language" content="中文" />
+      <meta name="DC.coverage.t.min" content="2016-07-29" />
+      <meta name="DC.coverage.t.max" content="2021-07-29" />
+      <meta name="DC.Publisher" content="交通部中央氣象局" />
+      <meta name="DC.Date" content="2016-07-29 04:45" />
+      <meta name="DC.Identifier" content="315070000H" />
+      <meta name="DC.Relation" content="" />
+      <meta name="DC.Rights" content="交通部中央氣象局" />
+      <meta name="Category.Theme" content="650" />
+      <meta name="Category.Cake" content="CM0" />
+      <meta name="Category.Service" content="EZ0" />
+      <meta name="DC.Title" content="天氣預報" />
+      <meta name="DC.Subject" content="天氣預報" />
+      <meta name="DC.Description" content="天氣預報" />
+      <meta name="Keywords" content="天氣預報, 縣市預報, 鄉鎮預報, １週預報, 週預報, 漁業預報, 漁業氣象, 潮汐, 國際都市, 藍色公路, 分析及預測圖, 天氣圖, 長期預報, 數值預報" />
+   </head>
+   <body class="qoo" id="Forecast">
+      <div id="container">
+         <script>
+            $(function() {  
+            
+            $( "#myquery" ).jsonSuggest(HotSearch);
+            
+            
+            });
+            
+         </script>
+         <div id="Header">
+            <a class="CwbLogo" href="/V7/">中央氣象局</a><!--Logo-->
+            <ul class="SeerchArea">
+               <li>
+                  <form target="_blank" method="post" action="/V7/search/search.php">
+                     <input name="query" id='myquery' type="text" style='text-align:left;' name="myquery">
+                     <input type="submit" class="SearchBtn" value="搜尋" name="送出">
+                     <a class="searchAdvance" target="_blank" href="http://www.cwb.gov.tw/cgi-bin/search/qpage.cgi?act=adv&amp;uilang=cht">進階</a> 
+                  </form>
+               </li>
+            </ul>
+            <!--SeerchArea-->
+            <div id="SocialGroup">
+               <ul>
+                  <li><a href="/V7/service/eservice/rss.htm" target="_top" class="RSS" title="RSS服務">R</a></li>
+                  <li><a href="/V7/service/eservice/facebook.htm" target="_top" class="FB" title="Facebook服務">F</a></li>
+                  <li><a href="/V7/service/eservice/pda.htm" target="_top" class="SPH" title="行動版網頁服務">P</a></li>
+                  <li><a href="/V7/service/eservice/app.htm" target="_top" class="PDA" title="智慧型手機APP服務">M</a></li>
+               </ul>
+            </div>
+            <!--SocialGroup-->
+            <div id="HeaderNavi">
+               <ul>
+                  <li><a href="/V7/index_home.htm" target="_top" title="回首頁">回首頁</a><span>|</span></li>
+                  <li><a href="/V7/sitemap.htm" target="_top" title="網站導覽">導覽</a><span>|</span></li>
+                  <li><a href="/eng/index.htm" target="_top" title="English Version">English</a><span>|</span></li>
+                  <li><a href="/kids/index.htm" target="_blank" title="兒童網">兒童網</a><span>|</span></li>
+                  <li><a href="https://pweb.cwb.gov.tw/CWBMEMBER2/" target="_blank" title="會員登入">會員登入</a><span>|</span></li>
+                  <li><a href="/V7/knowledge/faq/weatherfaq.htm" target="_top" title="常見問答">常見問答</a><span>|</span></li>
+                  <li><a href="/V7/service/email.htm" target="_top" title="意見箱">意見箱</a><span>|</span></li>
+                  <li><a href="/V7/knowledge/Bilingual_Glossary.htm" target="_top" title="雙語辭彙">雙語辭彙</a></li>
+               </ul>
+            </div>
+            <!--HeaderNavi-->
+            <div id="GlobalNavi">
+               <ul>
+                  <li><a class="NavLife" href="/V7/life/">生活氣象</a></li>
+                  <span>|</span>
+                  <li><a class="NavForecast" href="/V7/forecast/">預報</a></li>
+                  <span>|</span>
+                  <li><a class="NavObserve" href="/V7/observe/">觀測</a></li>
+                  <span>|</span>
+                  <li><a class="NavPrevent" href="/V7/prevent/">防災氣象</a></li>
+                  <span>|</span>
+                  <li><a class="NavClimate" href="/V7/climate/">氣候</a></li>
+                  <span>|</span>
+                  <li><a class="NavEarthquake" href="/V7/earthquake/">地震</a></li>
+                  <span>|</span>
+                  <li><a class="NavAstro" href="/V7/astronomy/">天文</a></li>
+                  <span>|</span>
+                  <li><a class="NavKnowledge" href="/V7/knowledge/">常識</a></li>
+                  <span>|</span>
+                  <li><a class="NavAbout" href="/V7/about/">關於氣象局</a></li>
+                  <span>|</span>
+                  <li><a class="NavService" href="/V7/service/">便民</a></li>
+                  <span>|</span>
+                  <li><a class="NavMedia" href="/V7/media/">影音</a></li>
+               </ul>
+               <div class="clear"></div>
+            </div>
+            <!--GlobalNavi-->
+            <div class="clear"></div>
+            <!--end line one-->
+         </div>
+         <div class="clear"></div>
+         <!--end line two-->
+         <div class="banner-station"
+      </div>
+      <!--<div class="anniversary70">玉山觀測站70週年</div>-->
+      </div>
+      <div id="main">
+         <div id="Navigator">
+            <div class="access"><a accesskey="L" title="左方選單" href="#" class="white">:::</a></div>
+            <div class="through clearfix">
+               <script language="JavaScript">show_warning();</script>
+               <script type="text/javascript" src="/V7/js/stone-current_index_leftmenu.js"></script>
+               <ul style="display: block;" class="Report">
+                  <h3>預報</h3>
+                  <li class="levOne"><a href="/V7/forecast/" class="Forecast10">天氣預報</a></li>
+                  <ul>
+                     <li><a href="/V7/forecast/txt/w01.htm" class="Forecast11">天氣概況</a></li>
+                     <li><a href="/V7/forecast/" class="Forecast13">縣市預報</a></li>
+                     <li><a href="/V7/forecast/town368/" class="Forecast12">鄉鎮預報</a></li>
+                     <li><a href="/V7/forecast/week/week.htm" class="Forecast14">１週預報</a></li>
+                     <li><a href="/V7/forecast/UVI/UVI.htm" class="Forecast15">紫外線預報</a></li>
+                  </ul>
+                  <li class="levOne"><a href="/V7/service/member/reserve/reserve.htm" class="Forecast20">預約氣象</a></li>
+                  <li class="levOne"><a href="/V7/forecast/fishery/FSea.htm" class="Forecast30">漁業氣象</a></li>
+                  <ul>
+                     <li><a href="/V7/forecast/fishery/FSea.htm" class="Forecast31">遠海漁業</a></li>
+                     <li><a href="/V7/forecast/fishery/NSea.htm" class="Forecast32">臺灣近海</a></li>
+                     <li><a href="/V7/forecast/fishery/tide_1.htm" class="Forecast33">潮汐預報</a></li>
+                     <li><a href="/V7/forecast/fishery/tide_full.htm" class="Forecast34">滿潮預報圖</a></li>
+                     <li><a href="/V7/forecast/fishery/tide_height.htm" class="Forecast35">潮高預報圖</a></li>
+                     <li><a href="/V7/forecast/fishery/other_fishery.htm" class="Forecast36">其他漁業資訊</a></li>
+                  </ul>
+                  <li class="levOne"><a href="/V7/forecast/bluehighway/" class="Forecast40">藍色公路</a></li>
+                  <li class="levOne"><a href="/V7/forecast/world/world_aa.htm" class="Forecast50">國際都市</a></li>
+                  <ul>
+                     <li><a href="/V7/forecast/world/world_aa.htm" class="Forecast51">亞洲、大洋洲</a></li>
+                     <li><a href="/V7/forecast/world/world_am.htm" class="Forecast52">美洲</a></li>
+                     <li><a href="/V7/forecast/world/world_ea.htm" class="Forecast53">歐洲、非洲</a></li>
+                     <li><a href="/V7/forecast/world/world_ch.htm" class="Forecast54">中國大陸</a></li>
+                  </ul>
+                  <li class="levOne"><a href="/V7/forecast/fcst/I04.htm" class="Forecast60">分析及預測圖</a></li>
+                  <ul>
+                     <li><a href="/V7/forecast/fcst/I04.htm" class="Forecast61">最新天氣圖</a></li>
+                     <li><a href="/V7/forecast/fcst/I05.htm" class="Forecast62">地面天氣圖</a></li>
+                     <li><a href="/V7/forecast/fcst/I07.htm" class="Forecast63">1週預測圖</a></li>
+                     <li><a href="/V7/forecast/fcst/QPF.htm" class="Forecast64">定量降水預報</a></li>
+                     <li><a href="/V7/forecast/fcst/I12.htm" class="Forecast65">波浪分析圖</a></li>
+                     <li><a href="/V7/forecast/fcst/I13.htm" class="Forecast66">24小時波浪預報圖</a></li>
+                     <li><a href="/V7/forecast/fcst/I14.htm" class="Forecast67">36小時波浪預報圖</a></li>
+                     <li><a href="/V7/forecast/fcst/I15.htm" class="Forecast68">48小時波浪預報圖</a></li>
+                     <!--li><a href="/V7/forecast/fcst/I03.htm" class="Forecast69">斜溫圖</a></li-->
+                  </ul>
+                  <li class="levOne"><a href="/V7/forecast/long/long_month.htm" class="Forecast70">長期預報</a></li>
+                  <ul>
+                     <li><a href="/V7/forecast/long/long_month.htm" class="Forecast71">月天氣展望</a></li>
+                     <li><a href="/V7/forecast/long/long_season.htm" class="Forecast72">季天氣展望</a></li>
+                     <li><a href="/V7/forecast/long/enso_outlook.htm" class="Forecast73">聖嬰展望</a></li>
+                  </ul>
+                  <li class="levOne"><a href="/V7/forecast/nwp/nwp.htm" class="Forecast80">數值預報</a></li>
+                  <ul>
+                     <li><a href="/V7/forecast/nwp/nwp.htm" class="Forecast81">數值預報模式圖</a></li>
+                     <li><a href="/V7/forecast/nwp/marine_forecast.htm" class="Forecast82">海象預報模式圖</a></li>
+                     <li><a href="/V7/forecast/nwp/typhoon_surge.htm" class="Forecast83">颱風暴潮預報圖</a></li>
+                  </ul>
+                  <li class="levOne"><a href="/V7/forecast/talkweather/talkweather.htm" class="Forecast90">預報主任談天氣</a></li>
+                  <li class="levOne"><a href="/cwbwifi/" target="cwbwifi" class="ForecastA0" alt="風場預報顯示圖，將另開新視窗" title="風場預報顯示圖，將另開新視窗">風場預報顯示圖</a></li>
+               </ul>
+            </div>
+         </div>
+         <div id="content">
+            <div id="content_inner">
+               <div class="access ie6acc"><a accesskey="C" title="主要內容區" href="#">:::</a></div>
+               <script type="text/javascript" language="javascript">
+                  $(function () {
+                  MY_POS="0";
+                  MY_ID=".Forecast13";
+                  HideLevOne(MY_POS);
+                      $(".levOne").eq(MY_POS).next().show();
+                      $(".levOne").eq(MY_POS).next().find(MY_ID).css("color", "#69af0f");
+                  
+                  $(".levOne").click(function(){
+                         $(".levOne").eq(MY_POS).next().find(MY_ID).css("color", "#69af0f");
+                  });
+                  });
+                  
+               </script>
+               <script src="/V7/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+               <script src="/V7/js/ForecastMenu.js" type="text/javascript"></script>
+               <script type="text/javascript" src="/V7/js/js2-2-1.js"></script>
+               <div id="ContainerInOne">
+                  <div id="NavPath">
+                     <a href="/V7/">首頁</a><span>&gt;</span> <a href="/V7/forecast/">天氣預報</a> <span>&gt;</span> <a href="/V7/forecast/taiwan/Taipei_City.htm">縣市預報</a> <span>&gt;</span> <a href="Hsinchu_City.htm"   class="currentPage">新竹市</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+                     <div class="clear"></div>
+                  </div>
+                  <!--Path -->  
+                  <div class="BoxContent clearfix" id="box8">
+                     <div id="ContentTitle">
+                        <form name=f>
+                           <div class="CenterMenu">
+                              <label>其他預報地區</label>
+                              <select name="menu1" onChange="MM_jumpMenu('self',this,0)">
+                                 <option value="Taipei_City.htm">臺北市</option>
+                                 <option value="New_Taipei_City.htm">新北市</option>
+                                 <option value="Taoyuan_City.htm">桃園市</option>
+                                 <option value="Taichung_City.htm">臺中市</option>
+                                 <option value="Tainan_City.htm">臺南市</option>
+                                 <option value="Kaohsiung_City.htm">高雄市</option>
+                                 <option value="Keelung_City.htm">基隆市</option>
+                                 <option value="Hsinchu_City.htm" selected="selected">新竹市</option>
+                                 <option value="Hsinchu_County.htm">新竹縣</option>
+                                 <option value="Miaoli_County.htm">苗栗縣</option>
+                                 <option value="Changhua_County.htm">彰化縣</option>
+                                 <option value="Nantou_County.htm">南投縣</option>
+                                 <option value="Yunlin_County.htm">雲林縣</option>
+                                 <option value="Chiayi_City.htm">嘉義市</option>
+                                 <option value="Chiayi_County.htm">嘉義縣</option>
+                                 <option value="Pingtung_County.htm">屏東縣</option>
+                                 <option value="Yilan_County.htm">宜蘭縣</option>
+                                 <option value="Hualien_County.htm">花蓮縣</option>
+                                 <option value="Taitung_County.htm">臺東縣</option>
+                                 <option value="Penghu_County.htm">澎湖縣</option>
+                                 <option value="Kinmen_County.htm">金門縣</option>
+                                 <option value="Lienchiang_County.htm">連江縣</option>
+                              </select>
+                           </div>
+                        </form>
+                     </div>
+                     <!--Form -->
+                     <style type="text/css">
+                        /*FcstBoxTable01*/
+                        table.FcstBoxTable01{ width:98%; /*border:#8297d6 1px solid;*/ padding:0; margin:0 auto 20px auto; border-collapse:collapse; }
+                        table.FcstBoxTable01 tr{}
+                        table.FcstBoxTable01 thead th{ font-weight:normal; background-color:#FFF187; text-align:center; /*border-bottom:#8297d6 1px solid; border-left:#8297d6 1px solid;*/padding:5px; color:#0086B3; font-weight:bold; font-size:13px;}
+                        table.FcstBoxTable01 tbody th{
+                        font-weight:normal; /*background-color:#edf0f9;*/ text-align:center;
+                        border-top:#8297d6 1px solid; /*border-left:#8297d6 1px solid;*/ padding:5px 5px 5px 10px; color:#0086B3; font-weight:bold;}
+                        table.FcstBoxTable01 td{border-top:#8297d6 1px solid; /*border-left:#8297d6 1px solid;*/ text-align:center;padding:5px 5px 5px 10px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+                        table.FcstBoxTable01 td a{ color:#2f83cb; text-decoration:none;}
+                        table.FcstBoxTable01 td a:hover{ color:#2f83cb; text-decoration:underline;}
+                     </style>
+                     <!-- ##########################################################################################  -->
+                     <!-- 在地小幫手 -->
+                     <div style="display:block; padding:0 0 0 44px; margin:0;  height:36px; line-height:36px; text-decoration:none; font-size: 18px; color:#ee5103; font-weight:bolder; background: url(/V7/images/template/yunbao.png) no-repeat 0 0; ">在地天氣報馬仔</div>
+                     <div id=ftext style='overflow: auto; height: 110px; border:#E68A00 4px double;padding:15px;line-height:25px;font-family:arial;font-size:12pt;color:#000000;font-weight: 550; '></div>
+                     <script>    readTXT('/V7/forecast/taiwan/Data/W50_10018.txt?','ftext','utf-8');</script>
+                     <h3 class="CenterTitle">
+                        今明預報<span class="Issued">發布時間 : 2016/07/29 05:00 </span><!--發布時間  -->
+                     </h3>
+                     <!--CenterTitle -->
+                     <table class="FcstBoxTable01" summary="編排用">
+                        <thead>
+                           <tr>
+                              <th width="25%">新竹市</th>
+                              <th width="19%">溫度 (℃)</th>
+                              <th width="10%">天氣狀況</th>
+                              <th width="16%">舒適度</th>
+                              <th width="15%">降雨機率 (%)</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <th scope="row">今日白天 07/29 06:00~07/29 18:00</th>
+                              <td>27 ~ 34</td>
+                              <td>
+                                 <img src="../../symbol/weather/gif/day/08.gif" alt="晴時多雲" title="晴時多雲">
+                              </td>
+                              <td>舒適至悶熱</td>
+                              <td>10 %</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">今晚至明晨 07/29 18:00~07/30 06:00</th>
+                              <td>27 ~ 32</td>
+                              <td>
+                                 <img src="../../symbol/weather/gif/night/08.gif" alt="晴時多雲" title="晴時多雲">
+                              </td>
+                              <td>舒適至悶熱</td>
+                              <td>0 %</td>
+                           </tr>
+                           <tr>
+                              <th scope="row">明日白天 07/30 06:00~07/30 18:00</th>
+                              <td>27 ~ 34</td>
+                              <td>
+                                 <img src="../../symbol/weather/gif/day/02.gif" alt="多雲" title="多雲">
+                              </td>
+                              <td>舒適至悶熱</td>
+                              <td>20 %</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <!-- ##########################################################################################  -->
+                     <!-- １週預報 -->
+                     <div>
+                        <div id="box6">
+                           <script>
+                              read_modules('/V7/forecast/taiwan/inc/city/Hsinchu_City.htm','box6','utf-8');
+                           </script>		 
+                        </div>
+                     </div>
+                     <!-- ##########################################################################################  -->
+                     <!-- ##########################################################################################  -->
+                     <!-- １週體感溫度&UVI預報 -->
+                     <div>
+                        <div id="box">
+                           <script>
+                              read_modules('/V7/forecast/taiwan/inc/UVI/Hsinchu_City.htm','box','utf-8');
+                           </script>		 
+                        </div>
+                     </div>
+                     <div class="clear"></div>
+                  </div>
+                  <!-- ##########################################################################################  -->
+                  <!-- ##########################################################################################  -->
+                  <!-- 7Day 1週曲線圖 -->
+                  <script src="/HighCharts/js/highcharts.js"></script>
+                  <script src="/HighCharts/js/modules/exporting.js"></script>
+                  <script src="/V7/forecast/town368/Plot/plot_county.js"></script>
+                  <script language="JavaScript">
+                     read_modules('/V7/forecast/town368/Plot/Plot_County.php?townid=10018','box7','utf-8');
+                  </script>
+                  <div id="box7"></div>
+                  <h3 class="CenterTitle">月平均</h3>
+                  <!--CenterTitle -->
+                  <table class="FcstBoxTable01" summary="編排用">
+                     <thead>
+                        <tr>
+                           <th width="25%">七月</th>
+                           <th width="25%">最高溫 (℃)</th>
+                           <th width="25%">最低溫 (℃)</th>
+                           <th width="25%">降雨量 (mm)</th>
+                        </tr>
+                     </thead>
+                     <tr>
+                        <th scope="row">新竹</th>
+                        <td class="num">32.9</td>
+                        <td class="num">25.7</td>
+                        <td class="num">141.0</td>
+                     </tr>
+                  </table>
+                  <h3 class="CenterTitle">日出日沒、月出月沒</h3>
+                  <!--CenterTitle -->
+                  <table class="FcstBoxTable01" summary="編排用">
+                     <thead>
+                        <tr>
+                           <th width="20%">07/29</th>
+                           <th width="20%">日出時刻<br />hh:mm</th>
+                           <th width="20%">日沒時刻<br />hh:mm</th>
+                           <th width="20%">月出時刻<br />hh:mm</th>
+                           <th width="20%">月沒時刻<br />hh:mm</th>
+                        </tr>
+                     </thead>
+                     <tr>
+                        <th scope="row">新竹</th>
+                        <td class="num">05:22</td>
+                        <td class="num">18:42</td>
+                        <td class="num">00:53</td>
+                        <td class="num">14:22</td>
+                     </tr>
+                  </table>
+               </div>
+               <!--ContainerInOne -->
+               <script type="text/javascript" language="javascript">
+                  function c2f()
+                  {
+                  	if(document.ctof.ctemp.value.length == 0 )
+                  		{
+                  			 //alert('請輸入溫度');
+                  			 alert('please enter the Centigrade degree');
+                  			 document.ctof.ctemp.focus();
+                  			 return false;
+                  		}
+                  	document.ctof.ftemp.value=Math.round((document.ctof.ctemp.value*9/5+32)*10)/10;
+                  	return true;
+                  }
+                  function f2c()
+                  {
+                  	if(document.ftoc.ftemp.value.length == 0 )
+                  		{
+                  			 alert('please enter the Fahrenheit degree');
+                  			 document.ftoc.ftemp.focus();
+                  			 return false;
+                  		}
+                  	document.ftoc.ctemp.value=Math.round(((document.ftoc.ftemp.value-32)*5/9)*10)/10;
+                  	return true;
+                  }
+               </script>
+               <style type="text/css">
+                  .Tips {/*Browser大小*/
+                  width: 168px;
+                  margin-left: 0px;
+                  }
+                  .TipTable {/*Browser外面的大框*/
+                  border-collapse: collapse;
+                  text-align: center;
+                  width:98%;
+                  }
+                  .TipTable td {/*Browser內容外框*/
+                  padding: 4 ,4 ,4, 8;
+                  font-family:新細明體,細明體,標楷體;
+                  font-size:12px; 
+                  color: #666666;
+                  }
+                  .TipTable th {/*Browser上面及左邊表頭的外框*/
+                  background-color: #F8F8F8;
+                  background-repeat: no-repeat;
+                  background-position: left top;
+                  display: block;
+                  font-weight: bold;
+                  font-family: 新細明體,細明體,標楷體;
+                  font-size:12px;
+                  color:#0095DA!important;
+                  text-align: center;
+                  padding:10px 0px 2px 3px;
+                  }
+                  #Conversion {/*C F度數的字*/
+                  width:135px;
+                  float:center;
+                  margin-top: 10px;
+                  margin-right: 2px;
+                  margin-bottom:5px;
+                  font-family: Verdana, Arial, Helvetica, sans-serif;
+                  font-size: 10px;
+                  font-weight: normal;
+                  color: #333;
+                  }
+                  .inputTxt {/*給C F度數的空格大小*/ 
+                  padding-bottom: 0px;
+                  margin-left: 0px;
+                  font-family: Verdana, Arial, Helvetica, sans-serif;
+                  font-size: 10px;
+                  color: #000000;
+                  width:23px; /*給C F度數的寬*/ 
+                  height:13px;
+                  line-height: normal;
+                  background-color: #FFFFFF;
+                  border: 1px solid #CECECE;
+                  }
+                  .submit {/*按鈕Convert to*/
+                  width:40px;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                  height: 15px;
+                  /*text-align:center;*/
+                  color:#333;
+                  background-color: #C6C6C6;
+                  border-top-style: none;
+                  border-right-style: none;
+                  border-bottom-style: none;
+                  border-left-style: none;
+                  font-family: 新細明體,細明體,標楷體;
+                  font-size: 11px;
+                  }
+               </style>
+               <div id="ContainerInTwo">
+                  <div class="BoxEntry">
+                     <div class="BoxHead">瀏覽小技巧</div>
+                     <div class="BoxContent qoo">
+                        <ol>
+                           <li>點選各地點名稱就能看到更詳細的資訊</li>
+                        </ol>
+                     </div>
+                  </div>
+                  <!--瀏覽小技巧 -->
+                  <div class="BoxEntry">
+                     <div class="BoxHead">相關服務</div>
+                     <div class="BoxContent qoo">
+                        <ul class="RelatedService">
+                           <li><a target="_blank" href="/V7/forecast/taiwan/Data/W02.pdf?">今日白天PDF</a></li>
+                           <li><a target="_blank" href="/V7/forecast/taiwan/Data/W42.pdf?">今晚明晨PDF</a></li>
+                           <li><a target="_blank" href="/V7/forecast/taiwan/Data/W03.pdf?">明日白天PDF</a></li>
+                           <li>舒適度PDF(<a target="_blank" href="/V7/forecast/taiwan/Data/W20.pdf?">甲</a>、<a target="_blank" href="/V7/forecast/taiwan/Data/W32.pdf?">乙</a>)</li>
+                           <li><a target="_blank" href="/V7/forecast/taiwan/Data/W11.pdf?">１週天氣PDF</a></li>
+                           <li><a target="_blank" href="/V7/forecast/taiwan/Data/W53.pdf?">１週縣市天氣預報PDF</a></li>
+                           <li><a target="_blank" href="/V7/forecast/taiwan/Data/wfuvinatC.pdf?">１週縣市紫外線及體感溫度預報PDF</a></li>
+                           <!--
+                              <li><a target="_blank" href="/V7/forecast/taiwan/Data/W12.pdf?">１週旅遊PDF</a></li>
+                              -->
+                           <li><a target="_blank" href="/V7/forecast/long/long_month.htm?">月長期天氣展望</a></li>
+                           <li><a target="_blank" href="/V7/forecast/long/long_season.htm?">季長期天氣展望</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="BoxEntry">
+                     <div class="BoxHead">°C/°F 轉換</div>
+                     <div class="Tips">
+                        <table class="TipTable" summary="Layout Usage">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div id="Conversion">
+                                       <form name="ctof">
+                                          <input name="ctemp" type="text" class="inputTxt" id="ctemp">°C<input type="button" class="submit" onclick="c2f()" onkeypress="c2f()" value="轉換"> 
+                                          <input name="ftemp" type="text" class="inputTxt" id="ftemp">°F
+                                       </form>
+                                    </div>
+                                    <div id="Conversion">
+                                       <form name="ftoc">
+                                          <input name="ftemp" type="text" class="inputTxt" id="ftemp">°F<input type="button" value="轉換" onclick="f2c()" onkeypress="f2c()" class="submit"> 
+                                          <input name="ctemp" type="text" class="inputTxt" id="ctemp">°C
+                                       </form>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <!--°C/°F 轉換 -->
+               </div>
+               <!--ContainerInTwo -->
+               <div style="clear:both"></div>
+               <!--清除浮動div -->
+            </div>
+         </div>
+      </div>
+      <div id="Footer">
+         <div id="Footermenu">
+            <div id="Footerlist" class="NavLife">
+               <ul>
+                  <h4>生活氣象</h4>
+                  <li><a href="/V7/life/GoodFriend.htm">生活好朋友</a></li>
+                  <li><a href="/V7/life/Life.htm">生活氣象</a></li>
+                  <li><a href="/V7/life/Entertainment.htm">育樂氣象</a></li>
+                  <li><a href="http://app.cwb.gov.tw/SEV_checkin/" target="_blank">打卡報天氣</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavForecast">
+               <ul>
+                  <h4>預報</h4>
+                  <li><a href="/V7/forecast/">天氣預報</a></li>
+                  <li><a href="/V7/service/member/reserve/reserve.htm">預約氣象</a></li>
+                  <li><a href="/V7/forecast/fishery/FSea.htm">漁業氣象</a></li>
+                  <li><a href="/V7/forecast/bluehighway/">藍色公路</a></li>
+                  <li><a href="/V7/forecast/world/world_aa.htm">國際都市</a></li>
+                  <li><a href="/V7/forecast/fcst/I04.htm">分析及預測圖</a></li>
+                  <li><a href="/V7/forecast/long/long_month.htm">長期預報</a></li>
+                  <li><a href="/V7/forecast/nwp/nwp.htm">數值預報</a></li>
+                  <li><a href="/V7/forecast/talkweather/talkweather.htm">預報主任談天氣</a></li>
+                  <li><a href="/cwbwifi/" target="cwbwifi" alt="風場預報顯示圖，將另開新視窗" title="風場預報顯示圖，將另開新視窗">風場預報顯示圖</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavObserve">
+               <ul>
+                  <h4>觀測</h4>
+                  <li><a href="/V7/observe/real/index_N.htm">目前天氣</a></li>
+                  <li><a href="/V7/observe/rainfall/hk.htm">雨量觀測</a></li>
+                  <li><a href="/V7/observe/real/windAll.htm" target="_blank">風速觀測</a></li>
+                  <li><a href="/V7/observe/satellite/Sat_EA.htm">衛星雲圖</a></li>
+                  <li><a href="/V7/observe/radar/">雷達回波</a></li>
+                  <li><a href="/V7/observe/marine/">即時海況</a></li>
+                  <li><a href="/V7/observe/lightning/index.htm?">即時閃電</a></li>
+                  <li><a href="/V7/observe/temperature/">溫度分布</a></li>
+                  <li><a href="/V7/observe/UVI/UVI.htm">紫外線</a></li>
+                  <li><a href="/V7/observe/webcam/">即時影像</a></li>
+                  <li><a href="/V7/observe/wmtp/sst.htm">海溫分析</a></li>
+                  <li><a href="/V7/observe/phRain/">雨水pH值</a></li>
+                  <li><a href="/V7/observe/oZone/oZone_02.htm">臭氧觀測</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavPrevent">
+               <ul>
+                  <h4>防災氣象</h4>
+                  <li><a href="/V7/prevent/warning.htm">天氣警特報</a></li>
+                  <li><a href="/V7/earthquake/">地震報告</a></li>
+                  <li><a href="http://qpesums.cwb.gov.tw/" target="_blank" alt="將另開新視窗" title="將另開新視窗">降雨監測系統</a></li>
+                  <li><a href="/V7/prevent/typhoon/ty.htm?">颱風消息</a></li>
+                  <li><a href="http://rdc28.cwb.gov.tw/TDB/ntdb/pageControl/ty_warning" target="_blank" alt="將另開新視窗" title="將另開新視窗">歷史颱風</a></li>
+                  <li><a href="http://rdc28.cwb.gov.tw" target="_blank" alt="將另開新視窗" title="將另開新視窗">颱風資料庫</a></li>
+                  <li><a href="/V7/prevent/typhoon_surge/">颱風暴潮預報</a></li>
+                  <li><a href="/V7/prevent/typhoon_surge/watch.htm">海象暴潮監測</a></li>
+                  <li><a href="/V7/prevent/TSU2.htm">海嘯資訊</a></li>
+                  <li><a href="/V7/prevent/plan/conference/plan.htm">防災專區</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavClimate">
+               <ul>
+                  <h4>氣候</h4>
+                  <li><a href="/V7/climate/climate_info/climate_knowledge/knowledge_6.html">瞭解氣候</a></li>
+                  <li><a href="/V7/climate/climate_info/climate_change/change_1.html">氣候變遷</a></li>
+                  <li><a href="/V7/climate/climate_info/taiwan_climate/taiwan_5.html">臺灣氣候</a></li>
+                  <li><a href="/V7/climate/dailyPrecipitation/dP.htm">氣候統計</a></li>
+                  <li><a href="/V7/climate/watch/watch.htm">氣候監測</a></li>
+                  <li><a href="/V7/climate/agri/agrb.htm">農業氣象</a></li>
+                  <li><a href="/V7/climate/climate_info/forecast/forecast_1.html">短期氣候預測</a></li>
+                  <li><a href="/V7/climate/climate_info/information/information_1.html">氣候研究與應用推廣 </a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavEarthquake">
+               <ul>
+                  <h4>地震</h4>
+                  <li><a href="/V7/earthquake/quake_index.htm">最近地震</a></li>
+                  <li><a href="/V7/earthquake/rtd_eq.htm">地震活動彙整</a></li>
+                  <li><a href="/V7/earthquake/quake_world.htm">全球地震</a></li>
+                  <li><a href="/V7/knowledge/encyclopedia/eq000.htm">地震百問</a></li>
+                  <li><a href="/V7/earthquake/research.htm">技術報告</a></li>
+                  <li><a href="/V7/earthquake/accsta.htm">測站</a></li>
+                  <li><a href="/V7/earthquake/quake_preparedness.htm">地震防護</a></li>
+                  <li><a href="/V7/earthquake/damage_eq.htm">災害地震</a></li>
+                  <li><a href="/V7/earthquake/talk.htm">地震話題</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavAstro">
+               <ul>
+                  <h4>天文</h4>
+                  <li><a href="/V7/astronomy/sky.php">每月星象</a></li>
+                  <li><a href="/V7/astronomy/observation.htm">天文觀測</a></li>
+                  <li><a href="/V7/astronomy/calendar.htm">曆象資料</a></li>
+                  <li><a href="/V7/astronomy/hotlink.htm">星際之旅</a></li>
+                  <li><a href="/V7/astronomy/sunrise.htm">日出日沒</a></li>
+                  <li><a href="/V7/astronomy/moonrise.htm">月出月沒</a></li>
+                  <li><a href="/V7/astronomy/picture/phenomenon.htm">臺灣的星空</a></li>
+                  <li><a href="/V7/astronomy/twilight.htm">曙暮光時刻</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavKnowledge">
+               <ul>
+                  <h4>常識</h4>
+                  <li><a href="/V7/knowledge/encyclopedia/me000.htm">氣象百科</a></li>
+                  <li><a href="/V7/astronomy/sky.php">天文星象</a></li>
+                  <li><a href="/V7/knowledge/announce/announce.htm">宣導</a></li>
+                  <li><a href="/V7/knowledge/planning/index.htm" target="_blank" alt="將另開新視窗" title="將另開新視窗">特輯</a></li>
+                  <li><a href="/V7/knowledge/themedis.htm">主題專訪</a></li>
+                  <li><a href="/V7/knowledge/overview1.htm">氣象現代化</a></li>
+                  <li><a href="/V7/knowledge/Bilingual_Glossary.htm">雙語辭彙</a></li>
+                  <li><a href="/V7/knowledge/faq/weatherfaq.htm">常見問答</a></li>
+                  <li><a href="/V7/knowledge/faq/hottopic.htm">討論話題</a></li>
+                  <li><a href="/V7/knowledge/satellite_topics/truecolor.htm">衛星雲圖精選</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavAbout">
+               <ul>
+                  <h4>關於氣象局</h4>
+                  <li><a href="/V7/about/DG_Message.htm">局長的話</a></li>
+                  <li><a href="/V7/about/History.htm">組織簡介</a></li>
+                  <li><a href="/V7/about/Missions.htm">重要業務</a></li>
+                  <li><a href="/V7/about/Strategic_Plan.htm">施政目標</a></li>
+                  <li><a href="/V7/about/Organization.htm">組織架構</a></li>
+                  <li><a href="/V7/about/news_data.htm">最新消息</a></li>
+                  <li><a href="/V7/about/performance.htm">服務績效</a></li>
+                  <li><a href="/V7/about/yearpaper.htm">年報</a>
+                  <li>
+                  <li><a href="/V7/about/gender/index.htm" target="_blank" alt="將另開新視窗" title="將另開新視窗">性別主流化</a></li>
+                  <li><a href="http://www.nca.gov.tw/tservice2/" target="_blank" alt="將另開新視窗" title="將另開新視窗">替代役公益服務網</a></li>
+                  <li><a href="/V7/about/awards.htm">獎項專區</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavService">
+               <ul>
+                  <h4>便民</h4>
+                  <li><a href="http://south.cwb.gov.tw" target="_blank" alt="將另開新視窗" title="將另開新視窗">南區氣象服務</a></li>
+                  <li><a href="/V7/service/notice.htm">政府資訊</a></li>
+                  <li><a href="/V7/service/publication.htm">出版品</a></li>
+                  <li><a href="/V7/service/Service_Guide.htm">服務窗口</a></li>
+                  <li><a href="http://e-service.cwb.gov.tw/wdps/" target="_blank" alt="將另開新視窗" title="將另開新視窗">資料申購</a></li>
+                  <li><a href="https://exas.cwb.gov.tw/exas_service/ViewFormState.aspx" target="_blank" alt="將另開新視窗" title="將另開新視窗">儀器送校查詢</a></li>
+                  <li><a href="/V7/service/download.htm">下載專區</a></li>
+                  <li><a href="/V7/service/service.htm">多元服務</a></li>
+                  <li><a href="/V7/service/doc.htm">公文附件下載</a></li>
+                  <li><a href="/V7/service/Polls.htm">滿意度調查</a></li>
+                  <li><a href="/V7/service/hotlink1.htm">好站介紹</a></li>
+                  <li><a href="http://opendata.cwb.gov.tw" target="_blank">氣象局開放資料平臺</a></li>
+               </ul>
+            </div>
+            <div id="Footerlist" class="NavMedia">
+               <ul>
+                  <h4>影音</h4>
+                  <li><a href="/V7/media/">氣象影音頻道</a></li>
+                  <li><a href="/V7/media/education.htm">宣導短片</a></li>
+                  <li><a href="/V7/media/animation/sat/cloud.htm">專題動畫</a></li>
+               </ul>
+            </div>
+         </div>
+         <div id="Footer">
+            <div class="FooterIn">
+               <div class="FooterContentOne">
+                  <ul>
+                     <li>好站介紹</li>
+                     <li>‧<a href="/V7/service/hotlink1.htm">政府相關部門</a></li>
+                     <li>‧<a href="/V7/service/hotlink2.htm">學術研究單位</a></li>
+                     <li>‧<a href="/V7/service/hotlink3.htm">國際作業研究相關組織</a></li>
+                     <li>‧<a href="/V7/service/hotlink4.htm">其他相關站台</a></li>
+                  </ul>
+               </div>
+               <div class="FooterContentThree">
+                  <ul>
+                     <li><a href="/V7/private.htm">隱私權保護政策</a><span>|</span></li>
+                     <li><a href="/V7/security.htm">資訊安全政策</a><span>|</span></li>
+                     <li><a href="/V7/information.htm">網站資訊使用聲明</a><span>|</span></li>
+                     <li><a href="/V7/pi_secure.pdf" title="個人資料保護專區pdf,將會另開新視窗">個人資料保護專區</a></li>
+                  </ul>
+                  <address>08:30至下午05:30 <span>地址：10048臺北市中正區公園路64號</span>     總機：(02)2349-1000(代表號)  氣象查詢：(02)2349-1234  地震查詢：(02)2349-1168<br />        
+                     瀏覽器版本：建議使用 Google Chrome 47.0.2526、Firefox 40.0.3、Microsoft IE 8.0 以上 最佳解析度：1024 × 768      中華民國交通部中央氣象局 版權所有 非經授權禁止轉載      本網站參考時間：臺灣標準時間TST(GMT +08:00)
+                  </address>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+   </body>
+</html>

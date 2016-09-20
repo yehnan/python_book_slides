@@ -1,0 +1,17 @@
+
+
+USGS 地震觀測資訊網站
+提供JSON格式
+http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
+
+美化 https://jsonformatter.curiousconcept.com/
+
+鍵 type metadata features 地震資料   bbox
+properties place mag time 地點 震度 時間
+
+-------------------
+
+http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson
+
+http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson
+earthquake_data.txt

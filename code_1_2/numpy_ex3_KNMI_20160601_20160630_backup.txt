@@ -1,0 +1,44 @@
+# BRON: KONINKLIJK NEDERLANDS METEOROLOGISCH INSTITUUT (KNMI)
+# Opmerking: door stationsverplaatsingen en veranderingen in waarneemmethodieken zijn deze tijdreeksen van dagwaarden mogelijk inhomogeen! Dat betekent dat deze reeks van gemeten waarden niet geschikt is voor trendanalyse. Voor studies naar klimaatverandering verwijzen we naar de gehomogeniseerde reeks maandtemperaturen van De Bilt <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/gehomogeniseerde-reeks-maandtemperaturen-de-bilt> of de Centraal Nederland Temperatuur <http://www.knmi.nl/kennis-en-datacentrum/achtergrond/centraal-nederland-temperatuur-cnt>.
+# 
+# 
+# STN      LON(east)   LAT(north)     ALT(m)  NAME
+# 215:         4.437       52.141      -1.10  VOORSCHOTEN
+# 
+# YYYYMMDD = Datum (YYYY=jaar MM=maand DD=dag); 
+# TG       = Etmaalgemiddelde temperatuur (in 0.1 graden Celsius); 
+# TN       = Minimum temperatuur (in 0.1 graden Celsius); 
+# TX       = Maximum temperatuur (in 0.1 graden Celsius); 
+# 
+# STN,YYYYMMDD,   TG,   TN,   TX
+# 
+  215,20160601,  157,  130,  194
+  215,20160602,  130,  121,  141
+  215,20160603,  137,  122,  157
+  215,20160604,  184,  127,  242
+  215,20160605,  172,  110,  221
+  215,20160606,  172,  110,  223
+  215,20160607,  196,  136,  256
+  215,20160608,  147,  120,  184
+  215,20160609,  136,   90,  165
+  215,20160610,  148,   84,  193
+  215,20160611,  154,  125,  198
+  215,20160612,  164,  127,  215
+  215,20160613,  152,  144,  173
+  215,20160614,  150,  116,  183
+  215,20160615,  146,   96,  187
+  215,20160616,  151,   97,  194
+  215,20160617,  154,  122,  188
+  215,20160618,  132,   97,  159
+  215,20160619,  155,  117,  195
+  215,20160620,  157,  144,  165
+  215,20160621,  157,  115,  193
+  215,20160622,  197,  113,  250
+  215,20160623,  205,  179,  267
+  215,20160624,  175,  118,  205
+  215,20160625,  146,   97,  185
+  215,20160626,  154,  116,  179
+  215,20160627,  151,  110,  178
+  215,20160628,  151,   92,  202
+  215,20160629,  158,  135,  198
+  215,20160630,  161,  146,  182
